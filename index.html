@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Champion 💍</title>
+<title>Happy Valentine’s Day ❤️</title>
 
 <style>
 *{
@@ -43,7 +43,7 @@ body{
 .card{
     width:95%;
     max-width:450px;
-    height:90vh;
+    height:92vh;
     background:rgba(200,16,46,0.95);
     border:3px solid gold;
     border-radius:20px;
@@ -57,13 +57,14 @@ body{
 }
 
 h1{
-    font-size:24px;
+    font-size:22px;
     color:gold;
     text-shadow:0 0 10px #fff;
 }
 
 p{
-    font-size:15px;
+    font-size:14px;
+    line-height:1.4;
 }
 
 /* Buttons */
@@ -101,16 +102,6 @@ button:hover{
     display:none;
 }
 
-/* Final Message */
-.final-message{
-    display:none;
-    font-size:20px;
-    font-weight:bold;
-    color:gold;
-    text-shadow:0 0 15px white;
-    animation:zoomIn 1s ease forwards;
-}
-
 /* Question Section */
 .question-section{
     display:none;
@@ -124,7 +115,7 @@ button:hover{
 }
 
 .question-section label{
-    font-size:14px;
+    font-size:13px;
     margin-top:8px;
     display:block;
 }
@@ -136,6 +127,16 @@ button:hover{
     border:none;
     margin-top:3px;
     resize:none;
+}
+
+/* Final Message */
+.final-message{
+    display:none;
+    font-size:18px;
+    font-weight:bold;
+    color:gold;
+    text-shadow:0 0 15px white;
+    animation:zoomIn 1s ease forwards;
 }
 
 /* Roses */
@@ -155,10 +156,11 @@ button:hover{
 }
 </style>
 </head>
+
 <body>
 
 <script>
-// Stadium Lights
+// Golden stadium lights
 for(let i=0;i<80;i++){
     let light=document.createElement("div");
     light.className="light";
@@ -171,45 +173,63 @@ for(let i=0;i<80;i++){
 
 <div class="card">
 
+    <!-- Valentine Message -->
     <div>
-        <h1>⚽ My Champion</h1>
-        <p>You scored the winning goal in my heart ❤️</p>
-        <p>And I want you on my team forever 🏆</p>
+        <h1>❤️ Happy Valentine’s Day My Champion ⚽</h1>
+
+        <p>
+            On this special day of love,  
+            I want you to know that you are  
+            my greatest victory and my forever teammate 💚
+        </p>
+
+        <p>
+            You didn’t just score a goal in my heart…  
+            you became the whole game of my life ❤️🏆
+        </p>
+
+        <p>
+            Today and always — I choose you. 💍✨
+        </p>
     </div>
 
     <button onclick="showSurprise()">Kick Off Our Forever ⚽</button>
 
+    <!-- Photo -->
     <div class="photo" id="photoSection">
         <img src="WhatsApp Image 2026-02-14 at 8.17.39 PM.jpeg" alt="Our Photo">
     </div>
 
+    <!-- Proposal -->
     <div class="marriage-section" id="marriageSection">
-        <p style="font-size:18px;">💍 Will You Be My Forever Teammate?</p>
+        <p style="font-size:16px;">💍 Will You Be My Forever Teammate?</p>
         <button onclick="celebrate()">YES ❤️</button>
         <button onclick="celebrate()">Only YES 💍</button>
     </div>
 
+    <!-- Questions -->
     <div class="question-section" id="questionSection">
         <h3>💌 Love Interview</h3>
 
         <label>1. Who am I to you?</label>
         <textarea rows="2"></textarea>
 
-        <label>2. What made you fall in love with me?</label>
+        <label>2. What made you fall more in love with me?</label>
         <textarea rows="2"></textarea>
 
         <label>3. What is your dream with me?</label>
         <textarea rows="2"></textarea>
 
-        <label>4. Your favourite memory with me?</label>
+        <label>4. What is your favourite memory with me?</label>
         <textarea rows="2"></textarea>
 
-        <label>5. One cute habit of mine you secretly love?</label>
+        <label>5. What is one habit of mine you secretly love?</label>
         <textarea rows="2"></textarea>
 
         <button onclick="submitAnswers()">Submit My Answers ❤️</button>
     </div>
 
+    <!-- Final Message -->
     <div class="final-message" id="finalMessage">
         ⚽ GOOOOAAAL!!! ❤️ <br>
         HE SAID YES 💍 <br>
@@ -228,7 +248,7 @@ function showSurprise(){
 function celebrate(){
     document.getElementById("finalMessage").style.display="block";
 
-    for(let i=0;i<130;i++){
+    for(let i=0;i<150;i++){
         let rose=document.createElement("div");
         rose.className="rose";
         rose.innerHTML="🌹";
