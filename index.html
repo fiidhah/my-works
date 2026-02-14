@@ -3,111 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valentine Card</title>
+<title>My Champion 💍</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(to right, #ff758c, #ff7eb3);
-        font-family: 'Arial', sans-serif;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
 
-    .card {
-        width: 350px;
-        height: 450px;
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        text-align: center;
-        padding: 30px;
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.5s;
-    }
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#006847 40%, #c8102e 60%);
+    color:white;
+}
 
-    .card:hover {
-        transform: scale(1.05);
-    }
+/* Stadium Lights */
+.light{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:gold;
+    border-radius:50%;
+    box-shadow:0 0 12px gold;
+    animation:flicker 2s infinite alternate;
+}
 
-    h1 {
-        color: #ff4d6d;
-        margin-bottom: 20px;
-    }
+@keyframes flicker{
+    from{opacity:0.4;}
+    to{opacity:1;}
+}
 
-    p {
-        color: #555;
-        font-size: 18px;
-        line-height: 1.6;
-    }
+/* Card */
+.card{
+    width:95%;
+    max-width:450px;
+    height:90vh;
+    background:rgba(200,16,46,0.95);
+    border:3px solid gold;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    overflow-y:auto;
+    box-shadow:0 0 40px gold;
+}
 
-    .heart {
-        position: relative;
-        width: 100px;
-        height: 90px;
-        margin: 30px auto;
-        transform: rotate(-45deg);
-        background: #ff4d6d;
-        animation: beat 1s infinite;
-    }
+h1{
+    font-size:24px;
+    color:gold;
+    text-shadow:0 0 10px #fff;
+}
 
-    .heart:before,
-    .heart:after {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 90px;
-        background: #ff4d6d;
-        border-radius: 50%;
-    }
+p{
+    font-size:15px;
+}
 
-    .heart:before {
-        top: -50px;
-        left: 0;
-    }
+/* Buttons */
+button{
+    padding:10px;
+    border:none;
+    border-radius:25px;
+    font-size:14px;
+    cursor:pointer;
+    margin:5px;
+    background:linear-gradient(45deg,#006847,gold);
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
 
-    .heart:after {
-        left: 50px;
-        top: 0;
-    }
+button:hover{
+    transform:scale(1.1);
+    background:linear-gradient(45deg,gold,#006847);
+}
 
-    @keyframes beat {
-        0% { transform: scale(1) rotate(-45deg); }
-        50% { transform: scale(1.1) rotate(-45deg); }
-        100% { transform: scale(1) rotate(-45deg); }
-    }
+/* Photo */
+.photo{
+    display:none;
+}
 
-    .footer {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        font-size: 16px;
-        color: #ff4d6d;
-        font-weight: bold;
-    }
+.photo img{
+    width:100%;
+    border-radius:15px;
+    border:3px solid gold;
+}
+
+/* Marriage Section */
+.marriage-section{
+    display:none;
+}
+
+/* Final Message */
+.final-message{
+    display:none;
+    font-size:20px;
+    font-weight:bold;
+    color:gold;
+    text-shadow:0 0 15px white;
+    animation:zoomIn 1s ease forwards;
+}
+
+/* Question Section */
+.question-section{
+    display:none;
+    text-align:left;
+}
+
+.question-section h3{
+    text-align:center;
+    color:gold;
+    margin-bottom:10px;
+}
+
+.question-section label{
+    font-size:14px;
+    margin-top:8px;
+    display:block;
+}
+
+.question-section textarea{
+    width:100%;
+    border-radius:10px;
+    padding:5px;
+    border:none;
+    margin-top:3px;
+    resize:none;
+}
+
+/* Roses */
+.rose{
+    position:absolute;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    0%{transform:translateY(-10vh) rotate(0deg); opacity:1;}
+    100%{transform:translateY(110vh) rotate(360deg); opacity:0;}
+}
+
+@keyframes zoomIn{
+    from{transform:scale(0); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
 </style>
-
 </head>
 <body>
 
+<script>
+// Stadium Lights
+for(let i=0;i<80;i++){
+    let light=document.createElement("div");
+    light.className="light";
+    light.style.top=Math.random()*100+"vh";
+    light.style.left=Math.random()*100+"vw";
+    light.style.animationDuration=(1+Math.random()*3)+"s";
+    document.body.appendChild(light);
+}
+</script>
+
 <div class="card">
-    <h1>Happy Valentine's Day 💖</h1>
 
-    <div class="heart"></div>
-
-    <p>
-        You make my world brighter every single day.  
-        Thank you for being my happiness, my smile, and my everything.
-    </p>
-
-    <div class="footer">
-        Forever Yours ❤️
+    <div>
+        <h1>⚽ My Champion</h1>
+        <p>You scored the winning goal in my heart ❤️</p>
+        <p>And I want you on my team forever 🏆</p>
     </div>
+
+    <button onclick="showSurprise()">Kick Off Our Forever ⚽</button>
+
+    <div class="photo" id="photoSection">
+        <img src="WhatsApp Image 2026-02-14 at 8.17.39 PM.jpeg" alt="Our Photo">
+    </div>
+
+    <div class="marriage-section" id="marriageSection">
+        <p style="font-size:18px;">💍 Will You Be My Forever Teammate?</p>
+        <button onclick="celebrate()">YES ❤️</button>
+        <button onclick="celebrate()">Only YES 💍</button>
+    </div>
+
+    <div class="question-section" id="questionSection">
+        <h3>💌 Love Interview</h3>
+
+        <label>1. Who am I to you?</label>
+        <textarea rows="2"></textarea>
+
+        <label>2. What made you fall in love with me?</label>
+        <textarea rows="2"></textarea>
+
+        <label>3. What is your dream with me?</label>
+        <textarea rows="2"></textarea>
+
+        <label>4. Your favourite memory with me?</label>
+        <textarea rows="2"></textarea>
+
+        <label>5. One cute habit of mine you secretly love?</label>
+        <textarea rows="2"></textarea>
+
+        <button onclick="submitAnswers()">Submit My Answers ❤️</button>
+    </div>
+
+    <div class="final-message" id="finalMessage">
+        ⚽ GOOOOAAAL!!! ❤️ <br>
+        HE SAID YES 💍 <br>
+        Our Love Wins The Championship 🏆✨
+    </div>
+
 </div>
+
+<script>
+function showSurprise(){
+    document.getElementById("photoSection").style.display="block";
+    document.getElementById("marriageSection").style.display="block";
+    document.getElementById("questionSection").style.display="block";
+}
+
+function celebrate(){
+    document.getElementById("finalMessage").style.display="block";
+
+    for(let i=0;i<130;i++){
+        let rose=document.createElement("div");
+        rose.className="rose";
+        rose.innerHTML="🌹";
+        rose.style.left=Math.random()*100+"vw";
+        rose.style.fontSize=(14+Math.random()*24)+"px";
+        rose.style.animationDuration=(3+Math.random()*4)+"s";
+        document.body.appendChild(rose);
+
+        setTimeout(()=>{rose.remove();},7000);
+    }
+}
+
+function submitAnswers(){
+    alert("Your answers are saved in my heart forever ❤️⚽");
+}
+</script>
 
 </body>
 </html>
