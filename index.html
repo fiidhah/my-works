@@ -67,7 +67,6 @@ p{
     line-height:1.4;
 }
 
-/* Buttons */
 button{
     padding:10px;
     border:none;
@@ -86,7 +85,6 @@ button:hover{
     background:linear-gradient(45deg,gold,#006847);
 }
 
-/* Photo */
 .photo{
     display:none;
 }
@@ -97,12 +95,10 @@ button:hover{
     border:3px solid gold;
 }
 
-/* Marriage Section */
 .marriage-section{
     display:none;
 }
 
-/* Question Section */
 .question-section{
     display:none;
     text-align:left;
@@ -129,7 +125,6 @@ button:hover{
     resize:none;
 }
 
-/* Final Message */
 .final-message{
     display:none;
     font-size:18px;
@@ -139,7 +134,6 @@ button:hover{
     animation:zoomIn 1s ease forwards;
 }
 
-/* Roses */
 .rose{
     position:absolute;
     animation:fall linear forwards;
@@ -160,7 +154,6 @@ button:hover{
 <body>
 
 <script>
-// Golden stadium lights
 for(let i=0;i<80;i++){
     let light=document.createElement("div");
     light.className="light";
@@ -173,96 +166,104 @@ for(let i=0;i<80;i++){
 
 <div class="card">
 
-    <!-- Valentine Message -->
-    <div>
-        <h1>❤️ Happy Valentine’s Day My Champion ⚽</h1>
+<div>
+<h1>❤️ Happy Valentine’s Day My Champion ⚽</h1>
 
-        <p>
-            On this special day of love,  
-            I want you to know that you are  
-            my greatest victory and my forever teammate 💚
-        </p>
+<p>
+You are my greatest victory and my forever teammate 💚
+</p>
 
-        <p>
-            You didn’t just score a goal in my heart…  
-            you became the whole game of my life ❤️🏆
-        </p>
+<p>
+You didn’t just score a goal in my heart…  
+you became the whole game of my life ❤️🏆
+</p>
 
-        <p>
-            Today and always — I choose you. 💍✨
-        </p>
-    </div>
+<p>
+Today and always — I choose you. 💍✨
+</p>
+</div>
 
-    <button onclick="showSurprise()">Kick Off Our Forever ⚽</button>
+<button onclick="showSurprise()">Kick Off Our Forever ⚽</button>
 
-    <!-- Photo -->
-    <div class="photo" id="photoSection">
-        <img src="WhatsApp Image 2026-02-14 at 8.17.39 PM.jpeg" alt="Our Photo">
-    </div>
+<div class="photo" id="photoSection">
+<img src="WhatsApp Image 2026-02-14 at 8.17.39 PM.jpeg" alt="Our Photo">
+</div>
 
-    <!-- Proposal -->
-    <div class="marriage-section" id="marriageSection">
-        <p style="font-size:16px;">💍 Will You Be My Forever Teammate?</p>
-        <button onclick="celebrate()">YES ❤️</button>
-        <button onclick="celebrate()">Only YES 💍</button>
-    </div>
+<div class="marriage-section" id="marriageSection">
+<p style="font-size:16px;">💍 Will You Be My Forever Teammate?</p>
+<button onclick="celebrate()">YES ❤️</button>
+<button onclick="celebrate()">Only YES 💍</button>
+</div>
 
-    <!-- Questions -->
-    <div class="question-section" id="questionSection">
-        <h3>💌 Love Interview</h3>
+<div class="question-section" id="questionSection">
+<h3>💌 Love Interview</h3>
 
-        <label>1. Who am I to you?</label>
-        <textarea rows="2"></textarea>
+<label>1. Who am I to you?</label>
+<textarea rows="2"></textarea>
 
-        <label>2. What made you fall more in love with me?</label>
-        <textarea rows="2"></textarea>
+<label>2. What made you fall more in love with me?</label>
+<textarea rows="2"></textarea>
 
-        <label>3. What is your dream with me?</label>
-        <textarea rows="2"></textarea>
+<label>3. What is your dream with me?</label>
+<textarea rows="2"></textarea>
 
-        <label>4. What is your favourite memory with me?</label>
-        <textarea rows="2"></textarea>
+<label>4. What is your favourite memory with me?</label>
+<textarea rows="2"></textarea>
 
-        <label>5. What is one habit of mine you secretly love?</label>
-        <textarea rows="2"></textarea>
+<label>5. What habit of mine you secretly love?</label>
+<textarea rows="2"></textarea>
 
-        <button onclick="submitAnswers()">Submit My Answers ❤️</button>
-    </div>
+<button onclick="submitAnswers()">Send Answers to My Queen ❤️</button>
+</div>
 
-    <!-- Final Message -->
-    <div class="final-message" id="finalMessage">
-        ⚽ GOOOOAAAL!!! ❤️ <br>
-        HE SAID YES 💍 <br>
-        Our Love Wins The Championship 🏆✨
-    </div>
+<div class="final-message" id="finalMessage">
+⚽ GOOOOAAAL!!! ❤️ <br>
+HE SAID YES 💍 <br>
+Our Love Wins The Championship 🏆✨
+</div>
 
 </div>
 
 <script>
 function showSurprise(){
-    document.getElementById("photoSection").style.display="block";
-    document.getElementById("marriageSection").style.display="block";
-    document.getElementById("questionSection").style.display="block";
+document.getElementById("photoSection").style.display="block";
+document.getElementById("marriageSection").style.display="block";
+document.getElementById("questionSection").style.display="block";
 }
 
 function celebrate(){
-    document.getElementById("finalMessage").style.display="block";
+document.getElementById("finalMessage").style.display="block";
 
-    for(let i=0;i<150;i++){
-        let rose=document.createElement("div");
-        rose.className="rose";
-        rose.innerHTML="🌹";
-        rose.style.left=Math.random()*100+"vw";
-        rose.style.fontSize=(14+Math.random()*24)+"px";
-        rose.style.animationDuration=(3+Math.random()*4)+"s";
-        document.body.appendChild(rose);
-
-        setTimeout(()=>{rose.remove();},7000);
-    }
+for(let i=0;i<150;i++){
+let rose=document.createElement("div");
+rose.className="rose";
+rose.innerHTML="🌹";
+rose.style.left=Math.random()*100+"vw";
+rose.style.fontSize=(14+Math.random()*24)+"px";
+rose.style.animationDuration=(3+Math.random()*4)+"s";
+document.body.appendChild(rose);
+setTimeout(()=>{rose.remove();},7000);
+}
 }
 
 function submitAnswers(){
-    alert("Your answers are saved in my heart forever ❤️⚽");
+
+let answers=document.querySelectorAll("textarea");
+
+let message="❤️ Love Interview Answers ❤️%0A%0A";
+
+message+="1. Who am I to you?%0A"+answers[0].value+"%0A%0A";
+message+="2. What made you fall more in love with me?%0A"+answers[1].value+"%0A%0A";
+message+="3. What is your dream with me?%0A"+answers[2].value+"%0A%0A";
+message+="4. What is your favourite memory with me?%0A"+answers[3].value+"%0A%0A";
+message+="5. What habit of mine you secretly love?%0A"+answers[4].value+"%0A%0A";
+
+let phoneNumber="7306645003";  
+// Example: 917XXXXXXXXX (country code + number, no +, no spaces)
+
+let whatsappURL="https://wa.me/"+phoneNumber+"?text="+message;
+
+window.open(whatsappURL,"_blank");
 }
 </script>
 
